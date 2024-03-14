@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const testimoniesSchema = new mongoose.Schema(
+const TestimoniesSchema = new mongoose.Schema(
   {
     thumbnail: {
       type: "string",
@@ -28,6 +28,6 @@ const testimoniesSchema = new mongoose.Schema(
   }
 );
 
-const Testimonies = mongoose.model("Testimonies", testimoniesSchema);
+const Testimonies = mongoose.model("Testimonies", TestimoniesSchema);
 
-module.export = Testimonies;
+module.exports = Testimonies;

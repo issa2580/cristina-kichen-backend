@@ -14,12 +14,6 @@ const testimoniesCtrl = {
   createTestimonies: async (req, res) => {
     try {
       const { thumbnail, fullname, city, description } = req.body;
-      const user = Testimonies.findOne({ fullname: fullname });
-      if (user) {
-        res.status(400);
-        res.send({ msg: "the user has already testified" });
-        return;
-      }
       const newTestimonies = new Testimonies({
         thumbnail,
         fullname,
@@ -35,3 +29,5 @@ const testimoniesCtrl = {
     }
   },
 };
+
+module.exports = testimoniesCtrl;

@@ -9,6 +9,9 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+/* routes loading */
+app.use("/api", require("./routes/testimonies"));
+
 /* Database connected */
 const URL = process.env.MONGODB_URL;
 mongoose
