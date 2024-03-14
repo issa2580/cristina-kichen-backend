@@ -1,6 +1,7 @@
 /* modules loading */
 const express = require("express");
 const cors = require("cors");
+require("dotenv").config();
 
 /* servers loading */
 const app = express();
@@ -14,7 +15,7 @@ app.get("/", (req, res) => {
 });
 
 /* port loading */
-const port = 5000;
+const port = process.env.PORT;
 app.listen(port, () => {
   console.log(" server is listening on port " + port);
 });
